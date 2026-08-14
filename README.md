@@ -28,6 +28,7 @@ skills/grill/            Relentless questioning: stress-test, develop, check
 config/opencode/         OpenCode config (permissions as law)
 journal.md               Log of corrections and preference discoveries
 install.sh               Idempotent symlink bootstrap with backups
+uninstall.sh             Reverses install.sh, restores backups
 AGENTS.md                Meta-instructions for agents editing this repo
 ```
 
@@ -42,6 +43,12 @@ is safe to re-run. Test without touching real configs:
 
 ```
 TARGET_HOME=/tmp/fake-home ./install.sh
+```
+
+Undo everything (removes the links, restores your backed-up files):
+
+```
+./uninstall.sh
 ```
 
 ## Evolving it

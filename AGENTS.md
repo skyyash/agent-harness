@@ -12,8 +12,8 @@ Craft matters more than speed.
   decides whether the skill ever gets seen; write it with trigger phrases.
 - `config/` - per-tool configs. Enforcement, not advice.
 - `journal.md` - append-only corrections log. Never rewrite old entries.
-- `install.sh` - the only file that touches anything outside this repo, and
-  only when the user runs it.
+- `install.sh` / `uninstall.sh` - the only files that touch anything outside
+  this repo, and only when the user runs them.
 
 ## Editing rules
 
@@ -21,5 +21,6 @@ Craft matters more than speed.
 - Comments in config files explain the why, one line each.
 - When the user corrects you about a preference, propose a journal entry or
   an edit to `instructions/AGENTS.md`. That loop is the point of this repo.
-- Never run `install.sh` yourself. Present changes and let the user run it.
+- Never run `install.sh` or `uninstall.sh` yourself. Present changes and let
+  the user run them.
 - No git commits unless the user explicitly asks.

@@ -42,4 +42,5 @@ link "$TARGET_HOME/.agents/skills/grill"            "$REPO_DIR/skills/grill"
 
 echo
 echo "Done. Restart any running agent tools to pick up the changes."
-echo "To undo: delete the symlinks listed above and restore the .bak-$STAMP files."
+echo "To undo everything: ./uninstall.sh"
+echo "(Manual undo: delete the symlinks above, restore the .bak-$STAMP files.)"
