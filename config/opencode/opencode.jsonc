@@ -1,0 +1,30 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+
+  // Plan first: sessions start in the plan agent, edits wait for approval.
+  "default_agent": "plan",
+
+  // Permissions make the safety rules law, not advice.
+  "permission": {
+    // Confirm before modifying files.
+    "edit": "ask",
+    // Confirm before fetching external content.
+    "webfetch": "ask",
+    // Read-only commands are free; everything else asks.
+    // The ratchet: when a confirmation annoys you twice, whitelist that
+    // command here. Never bulk-allow.
+    "bash": {
+      "*": "ask",
+      "git status": "allow",
+      "git diff": "allow",
+      "git diff *": "allow",
+      "git log": "allow",
+      "git log *": "allow",
+      "git show": "allow",
+      "git show *": "allow",
+      "ls": "allow",
+      "ls *": "allow",
+      "pwd": "allow"
+    }
+  }
+}
