@@ -69,6 +69,7 @@ unlink "$TARGET_HOME/.claude/CLAUDE.md"
 unlink "$TARGET_HOME/.codex/AGENTS.md"
 unlink "$TARGET_HOME/.config/opencode/opencode.jsonc"
 unlink "$TARGET_HOME/.agents/skills/grill"
+unlink "$TARGET_HOME/.agents/skills/unslop"
 
 echo
 echo "Done. Any *.bak-* files listed above are yours to keep or delete."

@@ -25,6 +25,7 @@ symlinked into whichever tool I am using.
 ```
 instructions/AGENTS.md   The global contract, symlinked into every tool
 skills/grill/            Relentless questioning: stress-test, develop, check
+skills/unslop/           Cut AI tells from any writing, add human voice
 config/opencode/         OpenCode config (permissions as law)
 journal.md               Log of corrections and preference discoveries
 install.sh               Idempotent symlink bootstrap with backups

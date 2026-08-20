@@ -10,6 +10,9 @@ Craft matters more than speed.
   trace, no rule.
 - `skills/*/SKILL.md` - lazy-loaded procedures. Frontmatter `description`
   decides whether the skill ever gets seen; write it with trigger phrases.
+  `skills/unslop/` is inspired by cursor's pstack unslop skill
+  (https://github.com/cursor/plugins/blob/main/pstack/skills/unslop/SKILL.md),
+  edited by me.
 - `config/` - per-tool configs. Enforcement, not advice.
 - `journal.md` - append-only corrections log. Never rewrite old entries.
 - `install.sh` / `uninstall.sh` - the only files that touch anything outside
