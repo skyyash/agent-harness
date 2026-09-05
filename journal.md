@@ -22,3 +22,5 @@ Append under today's date:
 
 - Lets-think skill added. Grill is for code projects only, lets-think is for
   general ideas and concepts.
+- Premise-Constraints-Vision skill added. Used when starting a new project.
+- Rule: keep journal entries to one line, just what happened.
