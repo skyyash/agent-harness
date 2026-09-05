@@ -17,3 +17,8 @@ Append under today's date:
 
 - Harness created. The initial rules came from a discovery conversation, not
   from journal entries. From here on, entries drive changes. (Status: new)
+
+## 2026-09-05
+
+- Lets-think skill added. Grill is for code projects only, lets-think is for
+  general ideas and concepts.
