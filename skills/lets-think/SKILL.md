@@ -1,6 +1,6 @@
 ---
 name: lets-think
-description: Use when user wants guided exploration of a general idea or concept from current knowledge to real understanding. Triggers: 'lets-think', 'help me understand X', 'walk me through X', 'how does X work'.
+description: Use when user wants guided exploration of a general idea or concept from current knowledge to real understanding.
 ---
 
 # Lets Think
