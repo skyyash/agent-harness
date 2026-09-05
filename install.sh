@@ -38,8 +38,14 @@ link "$TARGET_HOME/.config/opencode/AGENTS.md"      "$REPO_DIR/instructions/AGEN
 link "$TARGET_HOME/.claude/CLAUDE.md"               "$REPO_DIR/instructions/AGENTS.md"
 link "$TARGET_HOME/.codex/AGENTS.md"                "$REPO_DIR/instructions/AGENTS.md"
 link "$TARGET_HOME/.config/opencode/opencode.jsonc" "$REPO_DIR/config/opencode/opencode.jsonc"
-link "$TARGET_HOME/.agents/skills/grill"            "$REPO_DIR/skills/grill"
-link "$TARGET_HOME/.agents/skills/unslop"           "$REPO_DIR/skills/unslop"
+
+# Per-skill: each tool reads the same SKILL.md format from a different path.
+for skill_dir in "$REPO_DIR/skills"/*/; do
+  skill_name="$(basename "$skill_dir")"
+  link "$TARGET_HOME/.agents/skills/$skill_name" "$skill_dir"
+  link "$TARGET_HOME/.claude/skills/$skill_name" "$skill_dir"
+  link "$TARGET_HOME/.codex/skills/$skill_name"  "$skill_dir"
+done
 
 echo
 echo "Done. Restart any running agent tools to pick up the changes."

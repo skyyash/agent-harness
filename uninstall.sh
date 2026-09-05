@@ -68,8 +68,13 @@ unlink "$TARGET_HOME/.config/opencode/AGENTS.md"
 unlink "$TARGET_HOME/.claude/CLAUDE.md"
 unlink "$TARGET_HOME/.codex/AGENTS.md"
 unlink "$TARGET_HOME/.config/opencode/opencode.jsonc"
-unlink "$TARGET_HOME/.agents/skills/grill"
-unlink "$TARGET_HOME/.agents/skills/unslop"
+
+for skill_dir in "$REPO_DIR/skills"/*/; do
+  skill_name="$(basename "$skill_dir")"
+  unlink "$TARGET_HOME/.agents/skills/$skill_name"
+  unlink "$TARGET_HOME/.claude/skills/$skill_name"
+  unlink "$TARGET_HOME/.codex/skills/$skill_name"
+done
 
 echo
 echo "Done. Any *.bak-* files listed above are yours to keep or delete."

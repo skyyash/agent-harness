@@ -26,12 +26,23 @@ symlinked into whichever tool I am using.
 instructions/AGENTS.md   The global contract, symlinked into every tool
 skills/grill/            Relentless questioning: stress-test, develop, check
 skills/unslop/           Cut AI tells from any writing, add human voice
+skills/lets-think/       Guided walk-through of general ideas, A to B
 config/opencode/         OpenCode config (permissions as law)
 journal.md               Log of corrections and preference discoveries
-install.sh               Idempotent symlink bootstrap with backups
+install.sh               Idempotent bootstrap with backups
 uninstall.sh             Reverses install.sh, restores backups
 AGENTS.md                Meta-instructions for agents editing this repo
 ```
+
+## Per-tool setup
+
+The installer wires the harness into three tools. Skill discovery paths differ:
+
+| Tool       | Instructions         | Skills                          | Config                       |
+|------------|----------------------|---------------------------------|------------------------------|
+| OpenCode   | `~/.config/opencode/AGENTS.md` | `~/.agents/skills/`     | `~/.config/opencode/opencode.jsonc` |
+| Claude Code | `~/.claude/CLAUDE.md` | `~/.claude/skills/`             | (no harness config needed)   |
+| Codex      | `~/.codex/AGENTS.md`  | `~/.codex/skills/`              | (no harness config needed)   |
 
 ## Install
 
